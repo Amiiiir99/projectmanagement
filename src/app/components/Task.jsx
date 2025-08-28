@@ -5,7 +5,7 @@ import { Trash2 } from "lucide-react";
 
 const Task = ({id, onDelete}) => {
 
-    const [title, setTitle] = useState("New Task")
+    const [title, setTitle] = useState("")
     const [details, setDetails] = useState("")
     const [dueDate, setDueDate] = useState("")
     
@@ -21,6 +21,7 @@ const Task = ({id, onDelete}) => {
             {/*title*/}
             <input type="text"
                     value={title}
+                    placeholder="New Task"
                     onChange={(e) => setTitle(e.target.value)} 
                     className="w-full text-lg font-semibold bg-transparent border-b border-gray-300 focus:outline-none"
             />

@@ -11,14 +11,14 @@ const Categories = () => {
             <nav className="flex flex-col space-y-2">
                 {categories.map((cat) => (
                     <button
-                    key={cat}
-                    onClick={() => setSelectedCategory(cat)}
-                    className={`px-3 py-1 rounded-full text-sm transition ${
-                      selectedCategory === cat
-                        ? "bg-purple-500 text-white"
-                        : "bg-gray-200 text-black hover:bg-gray-300"
-                    }`}
-                  >
+                      key={cat}
+                      onClick={() => setSelectedCategory(cat)}
+                      className={`px-3 py-1 rounded-full text-sm transition ${
+                        selectedCategory === cat
+                          ? "bg-purple-500 text-white border-2 border-transparent"
+                          : "bg-transparent hover:bg-purple-500 text-purple-500 hover:text-white border-2 border-purple-500"
+                      }`}
+                    >
                     {cat}
                   </button>
                 ))}
